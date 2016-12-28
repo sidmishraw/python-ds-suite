@@ -74,9 +74,9 @@ class LinkedList(object):
       return
     elif self.__start_node == None and position != 1:
       # last node(inserting at the end)
-        self.__start_node = self.__Node(node_data, None)
-        self.__length += 1
-        return
+      self.__start_node = self.__Node(node_data, None)
+      self.__length += 1
+      return
     else:
       positonCounter = 1
       prev = None
