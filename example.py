@@ -6,16 +6,14 @@ __author__ = 'sidmishraw'
 
 def test_linked_lists():
   'tests for linked lists'
-   from lists.lists import LinkedList
-   l = LinkedList()
-   l2 = LinkedList()
-   # testing inserts
-   # 1. should fail since inserting at a position that doesn't exist i.e 0
-   l.insert(24, 0)
-   # 2. should succeed
-
-
-
+  from lists.lists import LinkedList
+  l = LinkedList()
+  l2 = LinkedList()
+  # testing inserts
+  # 1. should fail since inserting at a position that doesn't exist i.e 0
+  l.insert(24, 0)
+  # 2. should succeed
+  print(l)
 
 
 def main():

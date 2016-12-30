@@ -81,7 +81,7 @@ class LinkedList(object):
       positonCounter = 1
       prev = None
       current = self.__start_node
-      while current.next_node != None:
+      while current != None:
         if position == positonCounter:
           break
         prev = current
@@ -89,7 +89,7 @@ class LinkedList(object):
         positonCounter += 1
       else:
         # last node(inserting at the end)
-        current.next_node = self.__Node(node_data, None)
+        prev.next_node = self.__Node(node_data, None)
         self.__length += 1
         return
       if positonCounter == 1:
@@ -109,17 +109,60 @@ class LinkedList(object):
   # NODE DELETION FROM THE LINKED LIST
   def delete_node(self, position):
     'deletes the node at the specified position'
-    pass
+    positonCounter = 1
+    prev = None
+    current = self.__start_node
+    if position == 1:
+      # deleting the first node
+      self.__start_node = current.next_node
+      del current
+      self.__length -= 1
+      return
+    elif position == self.__length:
+      # deleting the last node
+      while current.next_node != None:
+        prev = current
+        current = current.next_node
+      prev.next_node = None
+      del current
+      self.__length -= 1
+      return
+    else:
+      # handle deletion in between
+      while current.next_node != None:
+        if positonCounter == position:
+          prev.next_node = current.next_node
+          del current
+          self.__length -= 1
+          return
+        prev = current
+        current = current.next_node
+        positonCounter += 1
 
   # UPDATE NODE OF THE LINKED LIST
   def update_node(self, position, new_value):
     'updates the node at the specified position with the new value'
-    pass
+    positonCounter = 1
+    current = self.__start_node
+    while current != None:
+      if positonCounter == position:
+        current.node_data = new_value
+        return
+      current = current.next_node
+      positonCounter += 1
 
   # READ NODE VALUE
   def read_node(self, position):
     'reads the value of the node at the particular position'
-    pass
+    positonCounter = 1
+    current = self.__start_node
+    while current != None:
+      if positonCounter == position:
+        return current.node_data
+      current = current.next_node
+      positonCounter += 1
+    else:
+      return None
 
   def __repr__(self):
     'str representation of LinkedList'
