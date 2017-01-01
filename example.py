@@ -4,17 +4,15 @@
 
 __author__ = 'sidmishraw'
 
-def test_linked_lists():
+def build_linked_list(list_of_items):
   'tests for linked lists'
   from lists.lists import LinkedList
+  print('building linked list %s' % list_of_items)
   l = LinkedList()
-  l2 = LinkedList()
-  # testing inserts
-  # 1. should fail since inserting at a position that doesn't exist i.e 0
-  l.insert(24, 0)
-  # 2. should succeed
-  print(l)
-
+  for item in list_of_items:
+    l.insert(item)
+  print('linked list built = %s' % l)
+  return l
 
 def main():
   'point of entry of the program'

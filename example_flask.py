@@ -6,7 +6,7 @@ from flask import Flask
 from flask import request
 from flask import render_template
 
-from example import test_linked_lists
+from example import build_linked_list
 
 # initialize the application with the name of the module
 # when this module is running as __main__, the '__main__'
@@ -31,8 +31,9 @@ def index():
 def linked_lists():
   'for testing out my linked lists'
   list_of_items = request.args.get('a').split(',')
-  print('incoming requests = %s' % request)
-  return render_template('lists.html', passed_list=list_of_items)
+  # print('incoming requests = %s' % request)
+  l = build_linked_list(list_of_items)
+  return render_template('lists.html', passed_list=l)
 
 
 # if this module is run as the main module, we start the applcation
