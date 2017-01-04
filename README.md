@@ -7,5 +7,8 @@ Author - Sidharth Mishra <sidmishraw>
 
 Suite contents:
 
-Linked List [Single] \n
+Linked List [Single]
+
 Linked List [Double]
+
+Binary Tree
