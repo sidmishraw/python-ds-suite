@@ -1,9 +1,17 @@
 # lists.py
+# Python_DS_Suite
+# -*- coding: utf-8 -*-
+# @Author: Sidharth Mishra
+# @Date:   2017-01-08 23:34:40
+# @Last Modified by:   Sidharth Mishra
+# @Last Modified time: 2017-01-08 23:34:48
+
+
 'All list related DS implementations will go in here'
 
 __author__ = 'sidmishraw'
 
-# Singly linked list
+# lists.py
 class LinkedList(object):
   'Linked list implementation'
 

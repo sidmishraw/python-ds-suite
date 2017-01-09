@@ -1,4 +1,12 @@
 # trees.py
+# Python_DS_Suite
+# -*- coding: utf-8 -*-
+# @Author: Sidharth Mishra
+# @Date:   2017-01-08 23:35:13
+# @Last Modified by:   Sidharth Mishra
+# @Last Modified time: 2017-01-08 23:35:19
+
+
 'This module contains the implementations of all the tree Data structures'
 
 
@@ -50,7 +58,7 @@ class BinarySearchTree(object):
       'sets the right child of the node'
       self.__right_child = new_right_child
 
-    # The insert should be called on the node
+    # trees.py
     # the node takes the responsibility of inserting the incoming
     # data value into the appropriate place
     def insert(self, incoming_new_value):
