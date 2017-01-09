@@ -174,8 +174,7 @@ class BinarySearchTree(object):
     # more - right subtree
     return self.__root.search(value)
 
-  # TODO - In - order Traversal
-  # first left subtree, then root and then the right subtree
+  # first left subtree, then root and then the right subtree (LRoRi)
   def in_order_traverse(self):
     'traverses the tree in IN_ORDER and generates the parsed tree string'
     tree_nodes = []
@@ -183,7 +182,7 @@ class BinarySearchTree(object):
     tree_string = ' '.join(list(map(str, tree_nodes)))
     return tree_string
 
-  # TODO - Post - order Traversal
+  # first left subtree, then the the right subtree and then the root (LRiRo)
   def post_order_traverse(self):
     'traverses the tree in PRE_ORDER and generates the parsed tree string'
     tree_nodes = []
@@ -191,8 +190,7 @@ class BinarySearchTree(object):
     tree_string = ' '.join(list(map(str, tree_nodes)))
     return tree_string
 
-  # TODO - Pre - order Traversal
-  # first the root, then the left subtree and then the right subtree
+  # first the root, then left subtree and then the right subtree (RoLRi)
   def pre_order_traverse(self):
     'traverses the tree in PRE_ORDER and generates the parsed tree string'
     tree_nodes = []

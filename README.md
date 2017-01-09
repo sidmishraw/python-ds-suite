@@ -11,4 +11,4 @@ Linked List [Single]
 
 Linked List [Double]
 
-Binary Tree
+Binary Search Tree
