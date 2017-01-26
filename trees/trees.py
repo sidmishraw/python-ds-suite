@@ -4,7 +4,7 @@
 # @Author: Sidharth Mishra
 # @Date:   2017-01-08 23:35:13
 # @Last Modified by:   Sidharth Mishra
-# @Last Modified time: 2017-01-08 23:35:19
+# @Last Modified time: 2017-01-11 03:23:27
 
 
 'This module contains the implementations of all the tree Data structures'
@@ -205,11 +205,21 @@ class BinarySearchTree(object):
     self.__root.pre_order_traverse(tree_nodes)
     tree_string = ' '.join(list(map(str, tree_nodes)))
     return tree_string
-
   
   @property
   def length(self):
     'The length of the BST'
     return self.__length
+
+
+
+
+# B-TREE
+class BTree(object):
+  'B-Tree implementation'
+
+  def __init__(self):
+    'initializes the B-tree'
+    pass
 
 
